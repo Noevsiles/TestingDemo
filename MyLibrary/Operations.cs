@@ -40,7 +40,7 @@ namespace MyLibrary
             return evenNumbers;*/
 
             //List<int> evenNumbers= Enumerable.Range(start, end).Where(number => IsEven(number)).ToList;
-            return Enumerable.Range(start, end).Where(IsEven).ToList();
+            return Enumerable.Range(start, end).Where(IsEven).ToList().Where(number => IsEven(number)).ToList();
         }
     }
 }
